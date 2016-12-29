@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!-- bower:css -->
+		<link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+		<!-- endbower -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+		<link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="container">
+			<img class="img-responsive center-block header-img" src="img/header.png" />
+			<span class="name">江山</span>
+		</div>
+		<div id="article_content" class="article_content">
+			<div>
+				<h2 class="code-head" id="J_CodeLang"><span>浏览器窗口可视区域大小</span></h2>
+				<p>获得浏览器窗口的尺寸（浏览器的视口，不包括工具栏和滚动条）的方法:</p>
+				<p><strong>一、对于IE9+、Chrome、Firefox、Opera 以及 Safari：</strong></p>
+				<p>•&nbsp; window.innerHeight - 浏览器窗口的内部高度</p>
+				<p>•&nbsp; window.innerWidth - 浏览器窗口的内部宽度</p>
+				<p><strong>二、对于 Internet Explorer 8、7、6、5：</strong></p>
+				<p>•&nbsp; document.documentElement.clientHeight表示HTML文档所在窗口的当前高度。</p>
+				<p>•&nbsp; document.documentElement.clientWidth表示HTML文档所在窗口的当前宽度。</p>
+				<p>或者</p>
+				<p>Document对象的body属性对应HTML文档的&lt;body&gt;标签</p>
+				<p>•&nbsp; document.body.clientHeight</p>
+				<p>•&nbsp; document.body.clientWidth</p>
+				<p><strong>在不同浏览器都实用的 <a href="http://lib.csdn.net/base/javascript" class="replace_word" title="JavaScript知识库" target="_blank" style="color:#df3434; font-weight:bold;">JavaScript</a> 方案：</strong></p>
+				<div style="margin:0px; padding:0px; color:rgb(20,25,30); ; font-size:14px; line-height:22.4px">
+					<pre class="code" style="margin-top:0px; margin-bottom:0px; padding:5px 10px; white-space:pre-wrap; word-wrap:break-word; border:1px solid rgb(204,204,204); font-family:Monaco,Menlo,'Ubuntu Mono',Consolas,source-code-pro,monospace; line-height:1.6em; font-size:13px; word-break:break-word" name="code"><span style="background-color:rgb(255,255,255)">var w= document.documentElement.clientWidth
+      || document.body.clientWidth;
+var h= document.documentElement.clientHeight
+      || document.body.clientHeight;</span></pre>
+				</div>
+				<br>
+			</div>
+			<div><span style="font-family:sans-serif,Arial,Verdana,'Trebuchet MS'; line-height:1.6em"></span>
+				<h2 class="code-head" id="J_CodeLang" style="margin:0px 15px; padding:16px 0px; font-size:16px; font-family:微软雅黑; border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(208,214,217); line-height:20px; color:rgb(20,25,30)"><a name="t1"></a>
+网页尺寸scrollHeight</h2>
+				<br>
+			</div>
+			<div><span style="font-family:sans-serif,Arial,Verdana,'Trebuchet MS'; line-height:1.6em"></span>
+				<p>scrollHeight和scrollWidth，获取网页内容高度和宽度。</p>
+				<p><span style="line-height:1.6em">一、针对IE、Opera:</span></p>
+				<p>scrollHeight 是网页内容实际高度，可以小于 clientHeight。</p>
+				<p><strong>二、针对NS、FF:</strong></p>
+				<p>scrollHeight 是网页内容高度，不过最小值是 clientHeight。也就是说网页内容实际高度小于 clientHeight 时，scrollHeight 返回 clientHeight 。</p>
+				<p><strong>三、浏览器兼容性</strong></p>
+				<div style="margin:0px; padding:0px; ; font-size:14px; line-height:22.4px">
+					<pre class="code" style="margin-top:0px; margin-bottom:0px; color:rgb(20,25,30); padding:5px 10px; white-space:pre-wrap; word-wrap:break-word; border:1px solid rgb(204,204,204); font-family:Monaco,Menlo,'Ubuntu Mono',Consolas,source-code-pro,monospace; line-height:1.6em; font-size:13px; word-break:break-word; background-color:rgb(255,255,255)" name="code">var w=document.documentElement.scrollWidth
+   || document.body.scrollWidth;
+var h=document.documentElement.scrollHeight
+   || document.body.scrollHeight;</pre>
+					<p style="margin-top:0.5em; margin-bottom:0.5em; padding-top:5px; padding-bottom:5px;  line-height:1.6; font-size:12px">
+						<strong>注意:区分大小写</strong></p>
+					<p style="margin-top:0.5em; margin-bottom:0.5em; padding-top:5px; padding-bottom:5px;  line-height:1.6; font-size:12px">
+						scrollHeight和scrollWidth还可获取Dom元素中内容实际占用的高度和宽度。</p>
+					<p style=" font-size:12px">
+					</p>
+					<h2 class="code-head" id="J_CodeLang" style="margin:0px 15px; padding:16px 0px; font-size:16px; font-family:微软雅黑; border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(208,214,217); line-height:20px"><a name="t2"></a>
+<span style="color:#33cc00">网页尺寸offsetHeight</span></h2>
+					<p></p>
+					<p style="margin-top:0.5em; margin-bottom:0.5em; padding-top:5px; padding-bottom:5px;  line-height:1.6; font-size:12px">
+					</p>
+					<p><strong>offsetHeight和offsetWidth，获取网页内容高度和宽度(包括滚动条等边线，会随窗口的显示大小改变)。</strong></p>
+					<p><strong>一、值</strong></p>
+					<p>offsetHeight = clientHeight + 滚动条 + 边框。</p>
+					<p><span style="line-height:1.6em">二、浏览器兼容性</span></p>
+					<div style="margin:0px; padding:0px; color:rgb(20,25,30); line-height:22.4px">
+						<pre class="code" style="margin-top:0px; margin-bottom:0px; padding:5px 10px; white-space:pre-wrap; word-wrap:break-word; border:1px solid rgb(204,204,204); font-family:Monaco,Menlo,'Ubuntu Mono',Consolas,source-code-pro,monospace; line-height:1.6em; font-size:13px; word-break:break-word" name="code"><span style="background-color:rgb(255,255,255)">var w= document.documentElement.offsetWidth
+    || document.body.offsetWidth;
+var h= document.documentElement.offsetHeight
+    || document.body.offsetHeight;</span></pre>
+					</div>
+					<span style="color:rgb(20,25,30); line-height:24px; white-space:pre-wrap"><strong>注：</strong>这个高是显示内容高度</span><br>
+					<p></p>
+					<p style=" font-size:12px">
+					</p>
+					<h2 class="code-head" id="J_CodeLang" style="margin:0px 15px; padding:16px 0px; font-size:16px; font-family:微软雅黑; border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(208,214,217); line-height:20px"><a name="t3"></a>
+<span style="color:#33cc00">网页卷去的距离与偏移量</span></h2>
+					<p></p>
+					<p style="margin-top:0.5em; margin-bottom:0.5em; padding-top:5px; padding-bottom:5px;  line-height:1.6; font-size:12px">
+					</p>
+					<p><strong>我们先来看看下面的图：</strong></p>
+					<p>
+						<a target="_blank" href="http://img.mukewang.com/5347b2b10001e1a307520686.jpg" style="outline:none; text-decoration:none; color:rgb(7,130,193)"><img alt="" src="http://img.mukewang.com/5347b2b10001e1a307520686.jpg" style="max-width:400px; border:0px; clear:both; width:330px"></a>
+					</p>
+					<p><span style="line-height:1.6em"><strong>scrollLeft:</strong>设置或获取位于给定对象左边界与窗口中目前可见内容的最左端之间的距离&nbsp;，即左边灰色的内容。</span></p>
+					<p><strong>scrollTop:</strong>设置或获取位于对象最顶端与窗口中可见内容的最顶端之间的距离&nbsp;，即上边灰色的内容。</p>
+					<p><span style="line-height:1.6em"><strong>offsetLeft:</strong>获取指定对象相对于版面或由&nbsp;offsetParent&nbsp;属性指定的父坐标的计算左侧位置&nbsp;。</span></p>
+					<p><strong>offsetTop:</strong>获取指定对象相对于版面或由&nbsp;<span style="font-size:12.7273px; line-height:20.8px">offsetParent</span>&nbsp;属性指定的父坐标的计算顶端位置 。</p>
+					<p><strong>注意:</strong></p>
+					<p><strong>1. 区分大小写</strong></p>
+					<p><strong>2.&nbsp;<span style="font-size:12.7273px; line-height:20.8px">offsetParent：布局中设置postion属性(</span>Relative、Absolute、fixed<span style="font-size:12.7273px; line-height:20.8px">)的父容器，从最近的父节点开始，一层层向上找，直到HTML的body。</span></strong></p>
+					<p><strong><span style="font-size:12.7273px; line-height:20.8px"><span style="color:rgb(20,25,30); ; font-size:14px; line-height:24px; white-space:pre-wrap">在一个浏览器程序中，一个网页的布局与浏览器的边框的距离，可以从css中设置，在一个已经确定好的网页布局中，里面有一个可以拉动滚动条的小窗口，offsetLeft就是有滚动条的窗口到浏览器的左边框的的距离，offsetTop就是滚动条的小窗口到浏览器顶部边框的距离，scrollLfet就是滚动条窗口到网页布局好的左边边框的距离，scrollTop就是滚动条窗口到网页布局好的上边边框的距离</span><br>
+</span></strong></p>
+					<p></p>
+				</div>
+			</div>
+
+		</div>
+		<!-- bower:js -->
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<!-- endbower -->
+		<script src="js/style.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

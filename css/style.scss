@@ -1,0 +1,47 @@
+$fontStack: 'Nunito Sans', sans-serif;
+$line-height: 1.6em;
+body {
+    background-image: url("../img/bg-yellow.png");
+    background-repeat: repeat;
+}
+p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 1.6;
+    font-family: 'PingFang SC',Helvetica,'Helvetica Neue',微软雅黑,Tahoma,Arial,sans-serif;
+    color: rgb(31,36,38);
+    text-align: left;
+    text-indent: 2em;
+}
+.name{
+    font-family: 'Carter One', cursive;
+    font-size: 60px;
+    color: white;
+    float: left;
+}
+.article_content {
+    background-color: white;
+    margin: 0 5% 10% 20%;
+    div {
+        h2 {
+            margin: 0 15px;
+            padding: 16px 0;
+            font-size: 23px;
+            font-family: $fontStack;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(208,214,217);
+            line-height: 20px;
+            text-align: center;
+            span {
+                color: #33cc00;
+            }
+        }
+        span {
+            font-family: $fontStack;
+            line-height: $line-height;
+        }
+    }
+}

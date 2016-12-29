@@ -1,0 +1,49 @@
+@charset "UTF-8";
+body {
+  background-image: url("../img/bg-yellow.png");
+  background-repeat: repeat;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.6;
+  font-family: 'PingFang SC',Helvetica,'Helvetica Neue',微软雅黑,Tahoma,Arial,sans-serif;
+  color: #1f2426;
+  text-align: left;
+  text-indent: 2em;
+}
+
+.name {
+  font-family: 'Carter One', cursive;
+  font-size: 60px;
+  color: white;
+  float: left;
+}
+
+.article_content {
+  background-color: white;
+  margin: 0 5% 10% 20%;
+}
+.article_content div h2 {
+  margin: 0 15px;
+  padding: 16px 0;
+  font-size: 23px;
+  font-family: "Nunito Sans", sans-serif;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #d0d6d9;
+  line-height: 20px;
+  text-align: center;
+}
+.article_content div h2 span {
+  color: #33cc00;
+}
+.article_content div span {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.6em;
+}
+
+/*# sourceMappingURL=style.css.map */
